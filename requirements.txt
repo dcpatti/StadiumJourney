@@ -8,5 +8,6 @@ pathspec==0.7.0
 pkginfo==1.7.0
 plotly==5.5.0
 ply==3.11
+Flask==1.1.1
 
 
