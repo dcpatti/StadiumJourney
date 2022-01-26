@@ -10,14 +10,12 @@ warnings.filterwarnings('ignore')
 import pandas as pd
 import glob
 import os
-#import geopandas as gpd
 from sklearn.neighbors import DistanceMetric #for creating the matrix
 
 
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import to_hex
-import seaborn as sns
 
 import plotly.express as px
 import plotly.graph_objects as go
