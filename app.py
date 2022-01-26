@@ -285,7 +285,7 @@ def mainpy():
     )
 
     fig2.show()
-    return fig2
+    return ("hello world")
 
 
 
