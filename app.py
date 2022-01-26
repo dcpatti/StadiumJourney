@@ -285,49 +285,11 @@ def mainpy():
     )
 
     fig2.show()
+    return fig2
 
 
 
 
-
-    #make another copy of the df
-
-    travel_df=teams_deduped
-    #the lat and lon are already float bu the depart_lat and depart_lon are strings, so we convert them 
-    #otherwise, our math below will fail
-
-    travel_df['depart_lat']=travel_df['depart_lat'].astype(float)
-    travel_df['depart_lon']=travel_df['depart_lon'].astype(float)
-
-
-
-    #create the function to calculate the travel between city pairs
-
-
-    def haversine_vectorize(lon1, lat1, lon2, lat2):
-
-        lon1, lat1, lon2, lat2 = map(np.radians, [lon1, lat1, lon2, lat2])
-
-        newlon = lon2 - lon1
-        newlat = lat2 - lat1
-
-        haver_formula = np.sin(newlat/2.0)**2 + np.cos(lat1) * np.cos(lat2) * np.sin(newlon/2.0)**2
-
-        dist = 2 * np.arcsin(np.sqrt(haver_formula ))
-        mi = 3958 * dist # for distance in miles;  for KM use 6367
-        return mi
-
-
-    #here we make sure our function works properly
-    #there will be some NaN's-- one for each team, since that is the starting location
-
-    #add column to dataframe when it's been calculated
-    travel_df['haversine_dist'] = haversine_vectorize(travel_df['depart_lon'],travel_df['depart_lat'],travel_df['lon'],
-                       travel_df['lat'])
-
-    #then round it
-    travel_df['haversine_dist']= travel_df['haversine_dist'].round(2)
-
-
+ 
 if __name__ == "__main__":
     app.run()
