@@ -24,9 +24,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
-
-path = r'data' # use your path
+path = 'data' # use your path
 all_files = glob.glob(path + "/*.csv")
 
 col_list = ('START DATE', 'START TIME', 'START TIME ET', 'SUBJECT', 'LOCATION')
