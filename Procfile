@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT app:stadiumjourney
+web: gunicorn stadiumjourney.app:app
