@@ -1,1 +1,1 @@
-web: gunicorn stadiumjourney.app:app
+web: gunicorn app:app
