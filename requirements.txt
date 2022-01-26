@@ -6,7 +6,7 @@ importlib-resources==5.2.2
 incremental==21.3.0
 json5==0.9.5
 scikit-learn==1.0.2
-numpy==1.2.21
+numpy
 locket==0.2.1
 mccabe==0.6.1
 menuinst==1.4.16
