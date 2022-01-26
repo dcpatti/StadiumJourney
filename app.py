@@ -5,7 +5,7 @@
 import warnings
 warnings.filterwarnings('ignore')
 
-
+from flask import flask
 
 import pandas as pd
 import glob
@@ -20,7 +20,11 @@ from matplotlib.colors import to_hex
 import plotly.express as px
 import plotly.graph_objects as go
 
+from flask import Flask
 
+app = Flask(__name__)
+
+@app.route("/")
 
 path = r'data' # use your path
 all_files = glob.glob(path + "/*.csv")
@@ -328,3 +332,7 @@ travel_df['haversine_dist'] = haversine_vectorize(travel_df['depart_lon'],travel
 
 #then round it
 travel_df['haversine_dist']= travel_df['haversine_dist'].round(2)
+
+
+if __name__ == "__main__":
+    app.run()
