@@ -5,7 +5,7 @@
 import warnings
 warnings.filterwarnings('ignore')
 
-from flask import flask
+from flask import Flask
 
 import pandas as pd
 import glob
@@ -20,7 +20,6 @@ from matplotlib.colors import to_hex
 import plotly.express as px
 import plotly.graph_objects as go
 
-from flask import Flask
 
 app = Flask(__name__)
 
