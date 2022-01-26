@@ -9,7 +9,6 @@ scikit-learn==1.0.2
 numpy
 locket==0.2.1
 mccabe==0.6.1
-menuinst==1.4.16
 mistune==0.8.4
 mkl-fft==1.3.0
 mkl-service==2.3.0
