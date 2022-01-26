@@ -23,6 +23,8 @@ import plotly.graph_objects as go
 
 app = Flask(__name__)
 
+@app.route("/")
+
 path = 'data' # use your path
 all_files = glob.glob(path + "/*.csv")
 
